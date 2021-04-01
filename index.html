@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src = "TDM.js"></script>
+	</style>
+	<body>
+		<h1 id = "container"></h1>
+		<div id = "conta"></div>
+		
+		<script type = "text/javascript">
+			var cont = document.getElementById("container");
+			var co = document.getElementById("conta");
+			
+			var table = new TDM.Table();
+			
+			table.addColumn("America");
+			table.addColumn("Africa");
+			table.addColumn("Antartica");
+			table.addColumn("Asie");
+			table.addColumn("Europa");
+			table.addColumn("Oceania");
+			
+			//row #1
+			table.addRow("America", "Mexique");
+			table.addRow("Africa", "Congo");
+			table.addRow("Antartica", "Red water");
+			table.addRow("Asie", "Chine");
+			table.addRow("Europa", "Espagne");
+			table.addRow("Oceania", "Australie");
+			
+			//row#2
+			table.addRow("America", "Bresil");
+			table.addRow("Africa", "Afrique du sud");
+			table.addRow("Asie", "Japon");
+			table.addRow("Europa", "Grande Bretagne");
+			table.addRow("Oceania", "Papoualesie");
+			
+			table.remove("Oceania",0);
+			table.displayAt(co,1000);
+			cont.innerHTML += table.get("Europa", 1);
+		</script>
+	</body>
+</html>
